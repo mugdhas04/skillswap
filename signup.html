@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up – SkillSwap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="orbs"></div>
+    <nav class="top-nav" id="navbar"></nav>
+    <main class="form-container">
+      <h1 class="headline">Create Your Skill Profile</h1>
+      <p class="subtext">
+        One account gives you matching, requests, and chat in one place.
+      </p>
+      <form id="signupForm" class="stack">
+        <div class="split">
+          <label>
+            Name
+            <input type="text" id="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" id="email" placeholder="name@email.com" required />
+          </label>
+        </div>
+
+        <label>
+          Password
+          <input type="password" id="password" placeholder="At least 6 characters" required />
+        </label>
+
+        <div class="split">
+          <label>
+            I Can Teach
+            <select id="teach" required>
+              <option value="">Choose a skill...</option>
+            </select>
+          </label>
+          <label>
+            I Want To Learn
+            <select id="learn" required>
+              <option value="">Choose a skill...</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="split">
+          <label>
+            Custom Teach Skill (Optional)
+            <input type="text" id="teach-custom" placeholder="Example: UI Animation" />
+          </label>
+          <label>
+            Custom Learn Skill (Optional)
+            <input type="text" id="learn-custom" placeholder="Example: Brand Strategy" />
+          </label>
+        </div>
+
+        <div class="split">
+          <label>
+            Current Level
+            <select id="level" required>
+              <option value="">Choose level...</option>
+            </select>
+          </label>
+          <label>
+            Availability
+            <select id="availability" required>
+              <option value="">Choose availability...</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          Bio
+          <textarea id="bio" placeholder="Share your learning goals and teaching style."></textarea>
+        </label>
+
+        <button type="submit" class="cta-button">Create Account</button>
+      </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

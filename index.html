@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkillSwap – Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="orbs"></div>
+    <nav class="top-nav" id="navbar"></nav>
+    <main class="centered">
+      <h1 class="headline">SkillSwap, Reimagined</h1>
+      <p class="subtext">
+        Build your own peer learning network. Teach one skill, gain another,
+        and move from random connections to focused collaboration.
+      </p>
+      <div class="hero-badges">
+        <span>Smart Matching</span>
+        <span>Structured Requests</span>
+        <span>Live Conversations</span>
+      </div>
+      <p id="data-mode"></p>
+      <div class="auth-actions">
+        <a href="signup.html" id="primary-entry" class="cta-button">Create Account</a>
+        <a href="login.html" id="secondary-entry" class="ghost-btn">I Already Have One</a>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard – SkillSwap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="orbs"></div>
+    <nav class="top-nav" id="navbar">
+      <!-- This content is dynamically injected via script.js -->
+    </nav>
+
+    <main class="dashboard-container">
+      <h1 class="headline">Welcome, <span id="username">...</span></h1>
+      <p class="subtext">
+        You're teaching <strong id="teach-skill">...</strong> and want to learn
+        <strong id="learn-skill">...</strong>. Current level:
+        <strong id="user-level">...</strong>.
+      </p>
+      <section class="analytics-shell">
+        <div class="analytics-header">
+          <h2>Your Momentum</h2>
+          <p>Live activity metrics from your learning network.</p>
+        </div>
+        <div class="analytics-grid" id="analytics-grid"></div>
+      </section>
+      <a href="my-requests.html" class="cta-button">My Requests</a>
+      <div class="card-container" id="match-list"></div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

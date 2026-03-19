@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile – SkillSwap</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="orbs"></div>
+    <!-- Navigation will be inserted dynamically -->
+    <nav class="top-nav" id="navbar"></nav>
+
+    <main class="dashboard-container">
+      <h1 class="headline" id="profile-name">Welcome, User</h1>
+
+      <section class="section-card" style="margin-top: 20px">
+        <p><strong>Can Teach:</strong> <span id="teaches">Loading...</span></p>
+        <p>
+          <strong>Wants to Learn:</strong> <span id="learns">Loading...</span>
+        </p>
+        <p><strong>Level:</strong> <span id="current-level">Loading...</span></p>
+        <p>
+          <strong>Availability:</strong>
+          <span id="current-availability">Loading...</span>
+        </p>
+        <p><strong>Bio:</strong> <span id="current-bio">Loading...</span></p>
+      </section>
+
+      <section id="profile-actions" style="margin-top: 16px"></section>
+
+      <section id="update-section" style="margin-top: 40px">
+        <h2 class="headline">Update Your Skills</h2>
+        <form id="updateForm" class="stack">
+          <label>
+            Name
+            <input type="text" id="update-name" required />
+          </label>
+          <div class="split">
+            <label>
+              I Can Teach
+              <select id="update-teach" required>
+                <option value="">I can teach...</option>
+              </select>
+            </label>
+            <label>
+              I Want To Learn
+              <select id="update-learn" required>
+                <option value="">I want to learn...</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="split">
+            <label>
+              Custom Teach Skill (Optional)
+              <input type="text" id="update-teach-custom" placeholder="Example: Motion Graphics" />
+            </label>
+            <label>
+              Custom Learn Skill (Optional)
+              <input type="text" id="update-learn-custom" placeholder="Example: Data Storytelling" />
+            </label>
+          </div>
+
+          <div class="split">
+            <label>
+              Level
+              <select id="update-level" required>
+                <option value="">Choose level...</option>
+              </select>
+            </label>
+            <label>
+              Availability
+              <select id="update-availability" required>
+                <option value="">Choose availability...</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            Bio
+            <textarea id="update-bio" placeholder="Write a short intro..."></textarea>
+          </label>
+          <button type="submit" class="cta-button" style="margin-top: 10px">
+            Update Skills
+          </button>
+        </form>
+      </section>
+
+      <section id="history-section" style="margin-top: 40px">
+        <h2 class="headline">People You’ve Chatted With</h2>
+        <ul id="chat-history"></ul>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

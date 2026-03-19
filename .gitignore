@@ -1,0 +1,3 @@
+# Local tooling artifacts 
+.vercel/ 
+node_modules/
